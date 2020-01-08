@@ -146,7 +146,7 @@ This gem depends on
 and
 [faraday](https://github.com/lostisland/faraday).
 
-It has official support for Ruby versions `1.9.x` and `2.x`.
+It has official support for Ruby versions `2.x`.
 
 ## Development
 

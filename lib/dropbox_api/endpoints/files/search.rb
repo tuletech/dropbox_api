@@ -25,9 +25,7 @@ module DropboxApi::Endpoints::Files
         :file_extension
       ], options)
 
-      request_params = query
-      request_params[:options] = options unless options.empty?
-          
+      request_params = { query: query, options: options }          
       perform_request(request_params)
     end
   end

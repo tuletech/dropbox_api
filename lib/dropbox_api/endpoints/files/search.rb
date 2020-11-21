@@ -13,7 +13,7 @@ module DropboxApi::Endpoints::Files
     # due to a short delay in indexing.
     #
 
-    add_endpoint :search do |query, options = {}|
+    add_endpoint :search_v2 do |query, options = {}|
       
       validate_options([
         :path,

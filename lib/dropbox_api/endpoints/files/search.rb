@@ -31,8 +31,8 @@ module DropboxApi::Endpoints::Files
     # @option options file_categories [List of FileCategory] Restricts search to 
     #   only the file categories specified.
 
-    add_endpoint :search_v2 do |query, options = {}|
-      
+    add_endpoint :search_v2 do |query, options = {}, match_field_options = {}|  
+
       validate_options([
         :path,
         :max_results,
@@ -42,6 +42,10 @@ module DropboxApi::Endpoints::Files
         :file_extensions,
         :file_categories,
       ], options)
+
+      validate_options([
+        :include_highlights
+      ], match_field_options)
 
       request_params = { query: query, options: options }          
       perform_request(request_params)

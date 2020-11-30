@@ -47,7 +47,11 @@ module DropboxApi::Endpoints::Files
         :include_highlights
       ], match_field_options)
 
-      request_params = { query: query, options: options }          
+      request_params = { 
+        query: query, 
+        options: options, 
+        match_field_options: match_field_options 
+      }          
       perform_request(request_params)
     end
   end

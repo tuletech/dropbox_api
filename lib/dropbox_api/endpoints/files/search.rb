@@ -30,6 +30,8 @@ module DropboxApi::Endpoints::Files
     #    the extensions specified.
     # @option options file_categories [List of FileCategory] Restricts search to 
     #   only the file categories specified.
+    # @option match_field_options include_highlights [Boolean] Whether to include 
+    #   highlight span from file title. The default for this field is False.
 
     add_endpoint :search_v2 do |query, options = {}, match_field_options = {}|  
 

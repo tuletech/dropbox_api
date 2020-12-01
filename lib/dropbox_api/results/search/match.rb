@@ -9,7 +9,7 @@ module DropboxApi::Results::Search
     end
 
     def resource
-      @resource ||= DropboxApi::Metadata::Resource.new @data["metadata"]
+      @resource ||= DropboxApi::Metadata::Resource.new @data.dig("metadata", "metadata")
     end
   end
 end

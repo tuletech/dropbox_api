@@ -33,7 +33,7 @@ module DropboxApi::Endpoints::Files
     # @option match_field_options include_highlights [Boolean] Whether to include 
     #   highlight span from file title. The default for this field is False.
 
-    add_endpoint :search_v2 do |query, options = {}, match_field_options = {}|  
+    add_endpoint :search do |query, options = {}, match_field_options = {}|  
 
       validate_options([
         :path,
